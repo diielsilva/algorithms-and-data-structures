@@ -39,4 +39,36 @@ public class RecursionExercises {
 
         return showFibonacciSmallerThanTwenty(++startpoint, endpoint, firstPrevious, secondPrevious, result);
     }
+
+    public String printAnArrayWithRecursion(int actualIndex, int[] numbers, String result) {
+        result += numbers[actualIndex] + "  ";
+        if (actualIndex == numbers.length - 1) {
+            System.out.println(result);
+            return result;
+        }
+        return printAnArrayWithRecursion(++actualIndex, numbers, result);
+    }
+
+    public String printNumberOfDigits(int number, int digits) {
+        if (String.valueOf(number).length() == digits) {
+            String result = "The number of digits in the number: " + number + " is: " + digits;
+            System.out.println(result);
+            return result;
+
+        }
+        return printNumberOfDigits(number, ++digits);
+    }
+
+    public String printSumOfANumber(int number, int stopCondition, int sum) {
+        String value = Integer.toString(number);
+        sum += Character.getNumericValue(value.charAt(stopCondition));
+
+        if (String.valueOf(number).length() - 1 == stopCondition) {
+            String result = "The sum of digits of " + number + " = " + sum;
+            System.out.println(result);
+            return result;
+        }
+        return printSumOfANumber(number, ++stopCondition, sum);
+    }
+
 }
