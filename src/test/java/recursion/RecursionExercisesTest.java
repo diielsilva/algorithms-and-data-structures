@@ -1,7 +1,6 @@
 package recursion;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -69,7 +68,7 @@ class RecursionExercisesTest {
     @Test
     void assertThatStringWasCorrectlyReversed() {
         String reversed = exercises.reverseAString("Daniel", "", 5);
-        assertEquals("leinaD",reversed);
+        assertEquals("leinaD", reversed);
     }
 
     @Test
@@ -80,7 +79,19 @@ class RecursionExercisesTest {
 
     @Test
     void assertThatIsAPrimeNumber() {
-        boolean result = exercises.primeNumber(6, 1);
-        assertFalse(result);
+        boolean result = exercises.primeNumber(5, 1);
+        assertTrue(result);
+    }
+
+    @Test
+    void assertThatListWasInverted() {
+        int[] array = exercises.invertAnArray(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 0, 6, 6 / 2);
+        assertEquals(7, array[0]);
+        assertEquals(6, array[1]);
+        assertEquals(5, array[2]);
+        assertEquals(4, array[3]);
+        assertEquals(3, array[4]);
+        assertEquals(2, array[5]);
+        assertEquals(1, array[6]);
     }
 }

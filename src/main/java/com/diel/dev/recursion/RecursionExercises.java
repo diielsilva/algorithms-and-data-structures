@@ -113,4 +113,16 @@ public class RecursionExercises {
         return primeNumber(number, ++baseCase);
     }
 
+    public int[] invertAnArray(int[] array, int actualPos, int lastIndex, int baseCase) {
+        int aux = array[actualPos];
+        array[actualPos] = array[lastIndex];
+        array[lastIndex] = aux;
+
+        if (actualPos == baseCase) {
+            return array;
+        }
+
+        return invertAnArray(array, ++actualPos, --lastIndex, baseCase);
+    }
+
 }
