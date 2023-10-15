@@ -71,4 +71,46 @@ public class RecursionExercises {
         return printSumOfANumber(number, ++stopCondition, sum);
     }
 
+    public int largestOfAnArray(int[] values, int largest, int baseCase) {
+        if (values[baseCase] > largest) {
+            largest = values[baseCase];
+        }
+
+        if (baseCase == values.length - 1) {
+            return largest;
+        }
+
+        return largestOfAnArray(values, largest, ++baseCase);
+    }
+
+    public String reverseAString(String input, String result, int baseCase) {
+        result += input.charAt(baseCase);
+
+        if (baseCase == 0) {
+            return result;
+        }
+
+        return reverseAString(input, result, --baseCase);
+    }
+
+    public int factorialOfANumber(int number, int baseCase, int result) {
+        result *= baseCase;
+        if (baseCase == number) {
+            return result;
+        }
+        return factorialOfANumber(number, ++baseCase, result);
+    }
+
+    public boolean primeNumber(int number, int baseCase) {
+        if (number % baseCase == 0 && baseCase != 1 && baseCase != number) {
+            return false;
+        }
+
+        if (baseCase == number) {
+            return true;
+        }
+
+        return primeNumber(number, ++baseCase);
+    }
+
 }

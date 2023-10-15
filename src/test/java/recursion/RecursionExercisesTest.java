@@ -1,8 +1,10 @@
 package recursion;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -56,5 +58,29 @@ class RecursionExercisesTest {
         String result = exercises.printSumOfANumber(25, 0, 0);
         assertNotNull(result);
         assertNotEquals("", result);
+    }
+
+    @Test
+    void assertThatLargestWasCorrectlyReturned() {
+        int largest = exercises.largestOfAnArray(new int[] { 2, 4, 6, 55, 8, 12, 22 }, 0, 0);
+        assertEquals(55, largest);
+    }
+
+    @Test
+    void assertThatStringWasCorrectlyReversed() {
+        String reversed = exercises.reverseAString("Daniel", "", 5);
+        assertEquals("leinaD",reversed);
+    }
+
+    @Test
+    void assertThatFactorialWasCorrectlyDisplayed() {
+        int result = exercises.factorialOfANumber(4, 1, 1);
+        assertEquals(24, result);
+    }
+
+    @Test
+    void assertThatIsAPrimeNumber() {
+        boolean result = exercises.primeNumber(6, 1);
+        assertFalse(result);
     }
 }
