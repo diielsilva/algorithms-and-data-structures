@@ -130,6 +130,8 @@ public class BinarySearchTree {
         }
     }
 
+
+    //TODO FIX BUG
     public BinarySearchTree remove(int value) {
 
         if (this.value == value) {
