@@ -11,9 +11,6 @@ public class Queue {
             first = person;
             last = person;
         } else {
-            if (first.getNext() == null) {
-                first.setNext(last);
-            }
             last.setNext(person);
             last = person;
         }
