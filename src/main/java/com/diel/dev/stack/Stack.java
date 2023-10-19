@@ -34,7 +34,6 @@ public class Stack {
             return null;
         }
         StackNode auxNode = new StackNode(top.getValue());
-        top.setNext(null);
         top = top.getPrevious();
         return auxNode;
     }
