@@ -6,9 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.diel.dev.structures.queues.Person;
-import com.diel.dev.structures.queues.Queue;
-
 public class QueueTest {
     private Queue queue;
 

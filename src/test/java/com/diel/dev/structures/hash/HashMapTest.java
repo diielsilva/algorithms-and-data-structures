@@ -7,9 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.diel.dev.structures.hash.HashMap;
-import com.diel.dev.structures.hash.HashNode;
-
 public class HashMapTest {
     private HashMap hashMap;
 
@@ -35,7 +32,7 @@ public class HashMapTest {
         node = hashMap.get(3);
         assertNotNull(node);
         assertEquals("Bob", node.getValue());
-        
+
         node = hashMap.get(2);
         assertNotNull(node);
         assertEquals("Jason", node.getValue());

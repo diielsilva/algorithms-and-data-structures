@@ -6,9 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.diel.dev.structures.stack.Stack;
-import com.diel.dev.structures.stack.StackNode;
-
 public class StackTest {
     private Stack stack;
 

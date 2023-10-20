@@ -6,8 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.diel.dev.structures.trees.BinarySearchTree;
-
 public class BinarySearchTreeTest {
     private BinarySearchTree tree;
 
